@@ -1,0 +1,229 @@
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background-color: #e91e63;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem;
+  justify-content: center;
+}
+
+.produto {
+  background: #fff;
+  border: 2px solid #f8bbd0;
+  border-radius: 12px;
+  width: 200px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(233, 30, 99, 0.1);
+}
+
+.produto img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.produto h3 {
+  margin: 0.5rem 0;
+  color: #e91e63;
+}
+
+.produto button {
+  background: #e91e63;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.produto button:hover {
+  background: #d81b60;
+}
+
+.carrinho {
+  background: #fff0f6;
+  border-top: 2px solid #f48fb1;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.carrinho h2 {
+  color: #e91e63;
+}
+
+
+/* Menu oculto por padrão */
+.menu-categorias {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  left: 20px;
+  background-color: #f8bbd0;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.menu-categorias a {
+  text-decoration: none;
+  color: #880e4f;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+/* Mostra o menu quando estiver com a classe aberto */
+.menu-categorias.aberto {
+  display: flex;
+}
+/* Container do topo */
+/* Layout do topo com 3 partes: menu, título e carrinho */
+.topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 1rem 2rem;
+}
+
+/* Menu hambúrguer à esquerda */
+.menu-hamburguer {
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Título centralizado */
+.titulo {
+  color: white;
+  font-size: 1.8rem;
+  flex: 1;
+  text-align: center;
+  margin: 0;
+}
+
+/* Carrinho no canto direito */
+.icone-carrinho {
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  position: relative;
+}
+
+#contador-carrinho {
+  background-color: #fff;
+  color: #e91e63;
+  border-radius: 50%;
+  padding: 2px 8px;
+  font-size: 0.8rem;
+  margin-left: 5px;
+}
+/* Agrupa lupa e carrinho no topo */
+.topo-direita {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Estilo da busca */
+.busca {
+  position: relative;
+}
+
+.busca input {
+  padding: 5px 30px 5px 10px;
+  border-radius: 20px;
+  border: 1px solid #f8bbd0;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+/* Ícone de lupa */
+.icone-lupa {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #e91e63;
+  pointer-events: none;
+}
+.carrinho button {
+  margin-top: 1rem;
+  background-color: #e91e63;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.carrinho button:hover {
+  background-color: #c2185b;
+}
+#banner-novidades {
+  background-color: #f8d7da;
+  color: #721c24;
+  text-align: center;
+  padding: 12px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+#banner-novidades {
+  background-color: #f8d7da;
+  color: #721c24;
+  text-align: center;
+  padding: 12px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+body::before {
+  content: "";
+  background-image: url('https://files.fm/u/43su27zx9b'); /* Substitua pela sua logo */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 300px; /* ajuste o tamanho da logo */
+  opacity: 0.08; /* quase transparente */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}

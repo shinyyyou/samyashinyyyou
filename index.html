@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>shinyyS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ <header>
+  <div class="topo">
+    <h1 class="titulo">Shinyy You </h1>
+    <div class="topo-direita">
+      <div class="busca">
+        <input type="text" id="campo-busca" placeholder="Buscar produtos..." oninput="filtrarProdutos()" />
+        <span class="icone-lupa">🔍</span>
+      </div>
+      <div class="icone-carrinho" onclick="scrollToCarrinho()">
+        🛒 <span id="contador-carrinho">0</span>
+      </div>
+    </div>
+  </div>
+
+  <nav class="menu-categorias" id="menu">
+    <a href="#">Início</a>
+    <a href="#">Itens</a>
+    <a href="#">Ajuda</a>
+  </nav>
+</header>
+
+<!-- Banner de Novidades -->
+<div id="banner-novidades">
+  <p id="mensagem-novidade">Confira nossas promoções imperdíveis!</p>
+</div>
+
+<div class="container" id="produtos">
+  <!-- Produtos serão inseridos aqui via JS -->
+</div>
+
+<div class="carrinho">
+  <h2>Carrinho de Compras</h2>
+  <ul id="lista-carrinho"></ul>
+  <p><strong>Total: R$ <span id="total">0.00</span></strong></p>
+  <button onclick="finalizarCompra()">Finalizar Compra</button>
+</div>
+
+<footer>
+  <h3>Formas de Pagamento</h3>
+  <div class="pagamentos">
+    <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa">
+    <img src="https://img.icons8.com/color/48/000000/mastercard.png" alt="MasterCard">
+    <img src="https://img.icons8.com/color/48/000000/pix.png" alt="Pix">
+    <p>&copy; 2025 Loja Rosa</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  const mensagens = [
+    "🆕 Chegaram novos acessórios exclusivos!",
+    "🔥 Promoções de até 50% só essa semana!",
+    "🚚 Frete grátis para compras acima de R$150!",
+    "🎁 Ganhe brindes em pedidos acima de R$200!"
+  ];
+
+  let indice = 0;
+  const elementoMensagem = document.getElementById("mensagem-novidade");
+
+  setInterval(() => {
+    indice = (indice + 1) % mensagens.length;
+    elementoMensagem.textContent = mensagens[indice];
+  }, 4000);
+</script>
+</body>
+</html>
